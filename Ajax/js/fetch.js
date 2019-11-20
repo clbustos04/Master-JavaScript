@@ -18,6 +18,13 @@ getUsuarios()
    .then(data => data.json())
    .then(usuario => {
       mostrarJanet(usuario.data);
+      return getInfo();
+   })
+   .then(data => {
+     console.log(data);
+   })
+   .catch(error => {
+     console.log(error+ " Api caida" );
    });
 
  function getUsuarios(){
@@ -27,6 +34,25 @@ getUsuarios()
  function getJanet(){
    return fetch('https://reqres.in/api/users/2');
  }
+
+ function getInfo(){
+   var profesor = {
+      nombre: 'Claudio',
+      apellido: 'Bustos',
+      mail:'sin@mail'
+   };
+   return new Promise((resolve, reject) => {
+     var profString = JSON.stringify(profesor);
+  //   var profString = 5; para provocar el catch
+       if (typeof profString != 'string' ) {
+          return reject('error');
+       }else{
+         return resolve(profString);
+       }
+
+   });
+
+}
 
  function listadoUsuarios(usuarios){
    for (var i in usuarios) {
