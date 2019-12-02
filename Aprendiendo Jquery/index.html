@@ -8,6 +8,17 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous">
    </script> -->
+   <style>
+      .margen-superior{
+        display: block;
+        margin-top: 45px;
+      }
+      .resaltado{
+        border-bottom: 2px solid green;
+      }
+
+
+   </style>
    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
    <script type="text/javascript" src="js/selectores.js"></script>
   </head>
@@ -23,6 +34,15 @@
     <p id="amarillo" class="zebra">Parrafo amarillo</p>
     <p id="azul">parrafo azul</p>
     <p class="zebra">Soy el último parrafo</p>
+
+    <div id="caja" class="">
+       <p>Hola soy una caja</p>
+       <ul>
+         <li>elemento 1</li>
+         <li class="resaltado">elemento 2</li>
+       </ul>
+       <span class="resaltado">Soy un span</span>
+    </div>
 
   </body>
 </html>
