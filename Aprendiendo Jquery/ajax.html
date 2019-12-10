@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ajax con Jquery</title>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/ajax.js"></script>
+    <style>
+      #datos{
+        border:2px solid green;
+        width: 250px;
+        height: 250px;
+        overflow: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ajax con Jquery</h1>
+
+    <form action="https://reqres.in/api/users" method="post" id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" value="">
+        <label for="job">Trabajo</label>
+        <input type="text" name="job" value="">
+        <input type="submit" name="" value="Enviar">
+    </form>
+    <br>
+    <div id="datos">
+
+    </div>
+
+  </body>
+</html>
