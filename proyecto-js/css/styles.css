@@ -9,10 +9,6 @@
     clear: both;
   }
 
-body{
-  background: url('../img/hojas.jpg');
-  background-attachment: fixed;
-}
 
 #global{
   width: 65%;
@@ -28,7 +24,6 @@ body{
   font-size: 30px;
   letter-spacing: 4px;
   line-height: 75px;
-  background: green;
   color: white;
   text-align: center;
   width: 385px;
@@ -54,11 +49,6 @@ body{
   height: 46px;
   display: inline-block;
   transition: all 300ms;
-}
-
-
-#menu ul li:hover{
-  background: green;
 }
 
 
@@ -103,7 +93,6 @@ color: #333;
   text-align: center;
   display: block;
   padding:15px;
-  background: green;
   color: white;
   text-decoration: none;
   margin-top:10px;
@@ -173,5 +162,45 @@ color: #333;
     }
 
     .bx-wrapper, .bx-viewport {
-      height: 250px !important; 
+      height: 250px !important;
+    }
+
+    #selector-tema {
+      position: fixed;
+      top: 40%;
+      background: rgba(51, 51, 51, 0.5);
+      width: 5%;
+      height: 100px;
+    }
+
+    #to-blue,
+    #to-red,
+    #to-green{
+        width: 25px;
+        height: 25px;
+        border: 1px solid white;
+        display: block;
+        margin: 0px auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+
+    #to-green{
+      background: green;
+    }
+
+    #to-red{
+      background: red;
+    }
+
+    #to-blue{
+      background: blue;
+    }
+
+    .subir{
+      color: white;
+      text-decoration: none;
+      display: block;
+      float: right;
     }

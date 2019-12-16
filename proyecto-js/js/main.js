@@ -50,5 +50,27 @@ $(document).ready(function(){
 
        });
 
+       //Selector de tema.
+       var tema = $('#tema');
+        $('#to-green').click(function(){
+          tema.attr("href","css/green.css")
+        });
 
-});
+        $('#to-blue').click(function(){
+          tema.attr("href","css/blue.css")
+        });
+
+        $('#to-red').click(function(){
+          tema.attr("href","css/red.css")
+        });
+
+
+        //Scroll arriba de la web
+        $('.subir').click(function(e){
+          //e.preventDefault();
+          $('html','body').animate({
+            scrollTop: 0
+          },1000);
+        //  return false;
+        });
+      });
