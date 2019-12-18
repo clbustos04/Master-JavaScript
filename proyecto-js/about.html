@@ -6,18 +6,16 @@
 
     <!-- Jquery -->
    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+   <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css">
+   <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.structure.min.css">
+   <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.theme.min.css">
+
+   <script type="text/javascript" src="js/jquery-ui-1.12.1/jquery-ui.min.js" ></script>
   <script type="text/javascript" src="js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
   <link rel="stylesheet" href="css/styles.css">
   <link id="tema" rel="stylesheet" href="css/green.css">
-   <!-- Slider -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 
-
-   <!-- moment js -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/es.js"></script>
   </head>
   <body>
     <div id="selector-tema">
@@ -44,18 +42,25 @@
           </nav>
         </header>
 
-        <!-- Slider -->
-        <div id="slider">
-          <div class="bxslider">
-            <div><img src="img/hojas.jpg" title="Hoja"></div>
-            <div><img src="img/rojo.jpg" title="Rojo"></div>
-            <div><img src="img/cielo.jpg" title="Cielo"></div>
-          </div>
-        </div>
 
         <section id="content">
-          <div id="posts">
-            <!-- Post añadidos desde un JSON-->
+          <div id="box">
+            <!-- Cargar acordeon-->
+            <h2>Sobre mi</h2>
+            <div id="acordeon">
+              <h3>¿Quienes somos?</h3>
+              <div>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
+             </div>
+             <h3>Nuestros Servicios</h3>
+             <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
+            </div>
+            <h3>Nuestros Clientes</h3>
+            <div>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
+           </div>
+            </div>
           </div>
           <aside id="sidebar">
             <div id="about">
