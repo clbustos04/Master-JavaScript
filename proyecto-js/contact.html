@@ -13,6 +13,9 @@
    <script type="text/javascript" src="js/jquery-ui-1.12.1/jquery-ui.min.js" ></script>
   <script type="text/javascript" src="js/main.js"></script>
 
+  <!-- plugin validación jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+
   <link rel="stylesheet" href="css/styles.css">
   <link id="tema" rel="stylesheet" href="css/green.css">
 
@@ -45,22 +48,28 @@
 
         <section id="content">
           <div id="box">
-            <!-- Cargar acordeon-->
-            <h2>Sobre mi</h2>
-            <div id="acordeon">
-              <h3>¿Quienes somos?</h3>
-              <div>
-                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
-             </div>
-             <h3>Nuestros Servicios</h3>
-             <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
-            </div>
-            <h3>Nuestros Clientes</h3>
-            <div>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
-           </div>
-            </div>
+            <!-- Cargar Formulario contacto-->
+            <h2>Contacto</h2>
+            <form id="form_contact" action="" method="post">
+                <label for="name">Nombre</label>
+                 <input type="text" name="name" data-validation="alphanumeric">
+                <label for="apellidos">Apellidos</label>
+                 <input type="text" name="apellidos" data-validation="alphanumeric">
+                <label for="email">Email</label>
+                 <input type="text" name="email" data-validation="email">
+                <label for="sexo">Sexo</label>
+                 <select name="sexo" data-validation="required">
+                   <option value="men">Hombre</option>
+                   <option value="women">Mujer</option>
+                 </select>
+                <label for="date">Fecha de Nacimiento</label>
+                 <input type="text" name="date"  data-validation="date" data-validation-format="dd-mm-yyyy">
+                <label for="edad">Edad</label>
+                 <input type="number" name="edad" data-validation="number">
+
+                <input type="submit" name="" value="Enviar">
+            </form>
+
           </div>
           <aside id="sidebar">
             <div id="about">
