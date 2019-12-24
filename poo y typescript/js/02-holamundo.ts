@@ -1,2 +1,2 @@
 console.log("Hola Mundo con typescript");
-alert("Holaaa Claudiooo Bustoooos");
+alert("Holaaa Claudiooo Bustoooos Garridooo");
