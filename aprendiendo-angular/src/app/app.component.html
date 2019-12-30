@@ -3,5 +3,7 @@
   <app-videojuegos></app-videojuegos>
   <app-videojuegos></app-videojuegos>
   <app-videojuegos></app-videojuegos>
-  <app-cursos></app-cursos>
+  <button (click)="ocultarCursos(false)" *ngIf="mostrarCursos">Ocultar</button>
+  <button (click)="ocultarCursos(true)" *ngIf="!mostrarCursos">Mostrar</button>
+  <app-cursos *ngIf="mostrarCursos"></app-cursos>
 </div>
