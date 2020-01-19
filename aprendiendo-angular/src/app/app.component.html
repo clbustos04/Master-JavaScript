@@ -1,9 +1,22 @@
 <div>
-  <h1>Video Juegos</h1>
-  <app-videojuegos></app-videojuegos>
-  <app-videojuegos></app-videojuegos>
-  <app-videojuegos></app-videojuegos>
+  <h1>Home</h1>
+
+  <nav>
+    <a [routerLink]="['/home']" [routerLinkActive] = "['active']">Home</a>
+    &nbsp;
+    <a [routerLink]="['/zapatillas']" [routerLinkActive] = "['active']">Zapatillas</a>
+    &nbsp;
+    <a [routerLink]="['/cursos']" [routerLinkActive] = "['active']">Cursos</a>
+    &nbsp;
+    <a [routerLink]="['/videojuegos']" [routerLinkActive] = "['active']">Video Juegos</a>
+    &nbsp;
+    <a [routerLink]="['/externo']" [routerLinkActive] = "['active']">Externo</a>
+   </nav>
+  <hr>
+
+  <!--
   <button (click)="ocultarCursos(false)" *ngIf="mostrarCursos">Ocultar</button>
   <button (click)="ocultarCursos(true)" *ngIf="!mostrarCursos">Mostrar</button>
-  <app-cursos *ngIf="mostrarCursos"></app-cursos>
+ -->
+ <router-outlet></router-outlet>
 </div>

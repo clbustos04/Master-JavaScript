@@ -1,0 +1,72 @@
+<div [ngStyle] = "{'background': config.color,
+                    'padding': '20px'}">
+<p>zapatillas works!</p>
+<p>{{titulo}} </p>
+<p>{{descripcion}} </p>
+<p>Añadir Marca</p>
+<p> <input type="text" [(ngModel)] = "miMarca" (blur)="onBlur()">  </p>
+<p><strong>{{miMarca}}</strong></p>
+<button (click) = 'getMiMarca()'>Ver Marca</button>
+<button (click) = 'addMarca()'>Añadir Marca</button>
+
+<p>Mejores marcas de zapatillas</p>
+<ul>
+    <li *ngFor="let marca of marcas; let indice = index">
+        {{indice + ' ' + marca}}
+        <button (click)="borrarMarca(indice)">Borrar</button>
+    </li>
+</ul>
+
+<ul>
+   <!-- <li *ngFor='let deportiva of zapatillas'>
+        <div *ngIf='deportiva.stock'>
+          {{deportiva.nombre}} - <strong>{{deportiva.precio}} $</strong>
+          <span *ngIf="deportiva.precio < 40000" 
+           [style.background] = "deportiva.precio < 40000 ? 'green' : 'transparent'"
+           [style.color] = "deportiva.precio < 40000 ? 'white' : 'black'"> En Oferta !!
+          </span>
+        </div>
+    </li>-->
+    <li *ngFor='let deportiva of zapatillas'>
+      
+           <span [ngStyle] = "{
+               'text-decoration' : !deportiva.stock ? 'line-through' : 'none'
+           } "> {{deportiva.nombre}} - <strong  [class.altoPrecio] = "deportiva.precio > 30000" 
+                [ngClass] = " { 
+                     'fondoAzul': deportiva.precio > 40000,
+                     'subrayado': deportiva.marca == 'Nike'
+                    } 
+                "
+                
+                >{{deportiva.precio}} $</strong></span>
+        
+          <span *ngIf="deportiva.precio < 40000" 
+           [style.background] = "deportiva.precio < 40000 ? 'green' : 'transparent'"
+           [style.color] = "deportiva.precio < 40000 ? 'white' : 'black'"> En Oferta !!
+          </span>
+       
+    </li>
+
+</ul>
+
+</div>
+<p>El color predominante es:</p>
+<input type="text" [(ngModel)]='color' (keyup.enter) = "mostrarPalabra()">
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase = "'yellow'">
+        El color es <span [ngStyle] = "{
+          'background' : color  
+        }">amarillo</span>.
+    </li>
+    <li *ngSwitchCase = "'blue'">
+        El color es <span [ngStyle] = "{
+            'background' : color  
+          }">azul</span>. 
+    </li>
+    <li *ngSwitchCase = "'white'">
+        El color es <span [ngStyle] = "{
+            'background' : color  
+          }">blanco</span>.
+    </li>
+
+</ul>
