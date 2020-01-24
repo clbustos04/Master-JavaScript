@@ -1,3 +1,9 @@
+<!--pipes fecha-->
+{{fecha | date:'dd/MM/yyyy'}} <br>
+{{fecha | date:'fullDate' | uppercase }} <br>
+{{'MENSAJE ESCRITO PARA PIPES' | lowercase}} <br>
+{{12 | calculadora: 4}}
+<hr>
 <input type="text" [(ngModel)]="userId" (keyup.enter)="cargaUsuario()">
 <div *ngIf="!user">
     <p>Cargando...</p>
