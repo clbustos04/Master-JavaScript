@@ -10,11 +10,17 @@ export class ExternoComponent implements OnInit {
   public user: any;
   public userId: any;
   public fecha: any;
+  public newUser: any;
+  public usuarioGuardado:any;
 
   constructor(
     private peticionesService: PeticionesService 
   ) { 
     this.userId = 1;
+    this.newUser = {
+      "name": "",
+      "job": ""
+      }
   }
 
   ngOnInit() {
@@ -33,6 +39,20 @@ export class ExternoComponent implements OnInit {
         console.log(<any>error);
       }
     )
+  }
+
+  onSubmit(form){
+    this.peticionesService.addUser(this.newUser).subscribe(
+      response => {
+          console.log(response);
+          this.usuarioGuardado = response;
+          form.reset();
+      },
+      error => {
+        console.log(<any>error);
+      }
+    )
+
   }
 
 }

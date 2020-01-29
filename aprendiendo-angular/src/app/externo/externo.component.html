@@ -13,3 +13,29 @@
     <img src="{{user.avatar}}" width="200px">
     <h3> {{user.first_name+ ' '+user.last_name}} </h3>
 </div>
+
+
+<hr>
+<h2>Crear Usuario</h2>
+
+<form #newUsuario="ngForm" (ngSubmit)="onSubmit(newUsuario)">
+  <label for="name">Nombre:</label>
+  <input type="text" name="name" #name="ngModel" [(ngModel)]="newUser.name" required> 
+  <span *ngIf="name.touched && !name.valid">El usuario es obligatorio</span><br>
+  <label for="job">Trabajo:</label>
+  <input type="text" name="job" #job="ngModel" [(ngModel)]="newUser.job" required> 
+  <span *ngIf="job.touched && !job.valid">El trabajo es obligatorio</span><br>
+
+  <input type="submit" value="Enviar" [disabled]="!newUsuario.form.valid">
+
+
+</form>
+
+<div *ngIf="usuarioGuardado">
+   <p>El Usuario Guardado es:</p>
+   <h1> {{usuarioGuardado.name}} </h1>
+   <h2> {{usuarioGuardado.job}}</h2>
+   <h3> {{usuarioGuardado.id}}</h3>
+   <h4> {{usuarioGuardado.createdAt}}</h4>
+
+</div>
