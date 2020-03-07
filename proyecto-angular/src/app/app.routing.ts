@@ -9,6 +9,8 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { CreateComponent } from './components/create/create.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { ErrorComponent } from './components/error/error.component';
+import { DetalleComponent } from './components/detalle/detalle.component';
+import { EditarComponent } from './components/editar/editar.component';
 
 
 
@@ -19,6 +21,8 @@ const appRoutes: Routes = [
     {path:'proyectos' , component: ProyectosComponent},
     {path:'crear-proyecto' , component: CreateComponent},
     {path:'contacto' , component: ContactoComponent},
+    {path:'detalle/:id' , component: DetalleComponent},
+    {path:'editar-proyecto/:id' , component: EditarComponent},
     {path: '**', component: ErrorComponent}
 ];
 

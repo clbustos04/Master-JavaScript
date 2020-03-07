@@ -1,1 +1,14 @@
-<p>proyectos works!</p>
+<div class="container">
+    <h2>Proyectos</h2>
+    <ul>
+        <li *ngFor="let proyect of proyects" class="proyect">
+            <a [routerLink]="['/detalle', proyect._id]">
+                <div class="image">
+                    <img src="{{url+'/get-image/'+proyect.image}}" *ngIf="proyect.image">
+                </div>
+                <h3>{{proyect.name}}</h3>
+                <p>{{proyect.category}}</p>
+            </a>
+         </li>
+    </ul>
+</div>

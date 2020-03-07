@@ -20,7 +20,7 @@ router.get('/get-proyects',ProyectController.getProyects);
 router.put('/upd-proyect/:id',ProyectController.updateProyect);
 router.delete('/del-proyect/:id',ProyectController.deleteProyect);
 router.post('/upload-image/:id', multipartyMiddleware, ProyectController.uploadImage);
-//router.post('/upload-image/:id', upload.single('avatar'), ProyectController.uploadImage);
+router.get('/get-image/:file',ProyectController.getImageFile);
 
 
 
