@@ -11,6 +11,8 @@ import { ErrorComponent } from './components/error/error.component';
 import { routing, appRoutingProviders } from './app.routing';
 import { DetalleComponent } from './components/detalle/detalle.component';
 import { EditarComponent } from './components/editar/editar.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { ResaltadoDirective } from './resaltado.directive';
 
 
 
@@ -23,7 +25,9 @@ import { EditarComponent } from './components/editar/editar.component';
     ContactoComponent,
     ErrorComponent,
     DetalleComponent,
-    EditarComponent
+    EditarComponent,
+    SliderComponent,
+    ResaltadoDirective
   ],
   imports: [
     BrowserModule,

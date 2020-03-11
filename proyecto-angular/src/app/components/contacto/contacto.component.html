@@ -1,5 +1,30 @@
-<div class="galeria">
-    <div><img src="/assets/img/coffee1.jpg" title="Funky roots"></div>
-    <div><img src="/assets/img/coffee2.jpg" title="The long and winding road"></div>
-    <div><img src="/assets/img/coffee3.jpg" title="Happy trees"></div>
+<div class="container">
+  <h1>Contacto</h1>
+
+  <div id="texto" #textos>
+    <p appResaltado>Página de contacto, puedes enviarnos dudas.</p>
   </div>
+
+  <button (click)="getParrafo()">Parrafo</button>
+
+
+  <!--
+  Tamaño del Slider
+  <input type="number" [(ngModel)]="widthSlider" (keyup.enter)="cargarSlider()">
+  <button (click)="cargarSlider()">Cargar Slider</button>
+  <button (click)="resetearSlider()">Resetear Slider</button>
+
+  <div *ngIf="anchuraToSlider">-->
+   <!--Traspaso de valores desde componente padre a hijo-->
+   <!--  <slider [anchura]="anchuraToSlider"
+            [etiquetas]="captions" 
+            (conseguirAutor)="getAutor($event)">
+    </slider>
+  </div>
+<div *ngIf="autor">
+  {{autor.nombre + " " + autor.webSite + " " + autor.youtube}}
+
+</div>-->
+  
+
+</div>
